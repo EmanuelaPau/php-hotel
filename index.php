@@ -47,13 +47,42 @@ Se non viene specificato nessun filtro, visualizzare come in precedenza tutti gl
             'distance_to_center' => 50
         ],
     ];
-
-    foreach ($hotels as $hotel) {
-        echo $hotel['name'];
-        echo $hotel['description'];
-        echo $hotel['parking'];
-        echo $hotel['vote'];
-        echo $hotel['distance_to_center'];
-    }
 ?>
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotels</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <table class="table">
+        <thead>
+            <tr>
+                <?php 
+                    foreach ($hotels as $key => $hotel) { ?>
+                        <th>
+                            <?php echo $key ?>
+                        </th>
+                <?php } ?>
+            </tr>
+        </thead>
+        <tbody>
+            
+            <?php  foreach($hotels as $hotel ) { ?>
+                <tr>
+                    <td><?php echo $hotel['name']; ?></td>
+                    <td><?php echo $hotel['description']; ?></td>
+                    <td><?php echo $hotel['parking']; ?></td>
+                    <td><?php echo $hotel['vote']; ?></td>
+                    <td><?php echo $hotel['distance_to_center']; ?></td>
+                </tr>
+            <?php } ?>
+            
+        </tbody>
+    </table>
+</body>
+</html>
