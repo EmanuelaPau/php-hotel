@@ -112,9 +112,9 @@ Se non viene specificato nessun filtro, visualizzare come in precedenza tutti gl
                                 <td><?php echo $hotel['distance_to_center']; ?></td>
                             </tr>
                     <?php } ?> 
-               <?php } ?>
+                <?php }
                
-               <?php else { ?>
+                else { ?>
                     <tr>
                         <td><?php echo $hotel['name']; ?></td>
                         <td><?php echo $hotel['description']; ?></td>
