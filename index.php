@@ -56,9 +56,38 @@ Se non viene specificato nessun filtro, visualizzare come in precedenza tutti gl
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hotels</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+    <h1 class="text-center mb-3">Hotels</h1>
+
+    <form class="mb-5" action="" method="POST">
+    <div class="form-row">
+        <div class="col mb-3">
+            <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="customCheck1">
+                <label class="custom-control-label" for="customCheck1">Has parking</label>
+            </div>
+        </div>
+
+        <div class="col">
+            <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Preference</label>
+            <select class="custom-select my-1 mr-sm-2 mb-3" id="inlineFormCustomSelectPref">
+                <option selected>Number of stars  </option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+        </div>
+        
+        <div class="col-auto my-1">
+             <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </div>
+    </form>
+
     <table class="table">
         <thead>
             <tr>
