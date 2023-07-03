@@ -46,6 +46,14 @@ Se non viene specificato nessun filtro, visualizzare come in precedenza tutti gl
             'vote' => 2,
             'distance_to_center' => 50
         ],
-
     ];
+
+    foreach ($hotels as $hotel) {
+        echo $hotel['name'];
+        echo $hotel['description'];
+        echo $hotel['parking'];
+        echo $hotel['vote'];
+        echo $hotel['distance_to_center'];
+    }
 ?>
+
